@@ -1,0 +1,102 @@
+<?xml version = "1.0" encoding = "utf-8" ?> 
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name = "VideoComp" extends = "Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+<interface>
+
+ 	<field id="Video" type="node"/> 
+	
+	<field id="content" type="node" onChange="OnContent"/>
+
+	<field id="Hud" type="node"/>
+	
+	<field id="width" type="int" onChange="OnWidthChange" />
+	
+	<field id="height" type="int" onChange="OnHeightChange" />
+	
+	<field id="Resolution" type="int" />
+	
+	<field id="GlobleEPGURL" type="string"/>
+	
+	<field id="nikunj" type="int" onChange="nikunj()"/>
+</interface>
+
+  <script type = "text/brightscript" uri="pkg:/components/VideoPlayer/VideoPlayer.brs"/>
+
+  <children >
+	<Poster
+			id="cover"/>
+			
+			<ButtonGroup id="ButtonGroup" translation="[10,10]"/>
+			
+			<LayoutGroup
+			id="itemDetails"
+			layoutdirection = "vert"
+    		horizalignment ="left"
+    		vertalignment = "bottom"
+    		additemspacingafterchild = "true"  
+    		itemspacings = "[10,10]">
+			
+			<Label
+				id="title"
+				horizAlign="left"
+				color="0xFFFFFFFF"
+				text="title"
+				font="font:MediumBoldSystemFont"/>
+	
+			<Label
+				id="itemInfo"
+				text="itemInfo"
+				horizAlign="left"
+				color="0xFFFFFFFF"
+				font="font:MediumBoldSystemFont"/>
+	
+			<Label
+				id="description"
+				text="description"
+				horizAlign="left"
+				color="0xFFFFFFFF"
+				numLines="2"
+				width="300"
+				wrap="true"
+				lineSpacing="-0.5"
+				font="font:SmallestSystemFont"/>
+		</LayoutGroup>
+    <Video
+    	id = "liveVideo"
+	    />
+	    
+	<Hud
+		id = "Hud"
+		/>    
+		<BusySpinner id="spinner" spinInterval="2" clockwise="true" visible = "true" translation="[60, 80]" />
+			
+<!--       
+	<Label 
+		id = "TestLabel"
+		text = "I am TestLabel"
+		translation = "[500,200]"/>
+  
+   <Poster 
+      id = "examplePoster" 
+      width = "512" 
+      height = "288" 
+      uri = "http://sdktestinglab.com/Tutorial/images/videopg.jpg" />      
+
+	<Animation 
+      id = "exampleFloatAnimation" 
+      duration = "5" 
+      easeFunction = "linear" >
+
+      <FloatFieldInterpolator 
+        key = "[ 0.0, 0.5, 1.0 ]" 
+        keyValue = "[ 1.0, 0.0, 1.0 ]" 
+        fieldToInterp = "examplePoster.opacity" />
+
+    </Animation>
+--> 
+  </children>
+
+</component>
