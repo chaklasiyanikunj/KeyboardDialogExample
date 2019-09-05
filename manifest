@@ -1,0 +1,13 @@
+title=WiseRoku
+major_version=2
+minor_version=0
+build_version=6543
+mm_icon_focus_hd=pkg:/images/TV_hd.png
+mm_icon_focus_sd=pkg:/images/TV_sd.png
+splash_screen_fhd=pkg:/images/TV_fhd.png
+splash_screen_hd=pkg:/images/TV_hd.png
+splash_screen_sd=pkg:/images/TV_sd.png
+splash_color=#800080
+splash_min_time=1000
+ui_resolutions=FHD,HD,SD
+splash_rsg_optimization=1
