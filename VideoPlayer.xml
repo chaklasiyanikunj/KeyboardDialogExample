@@ -66,6 +66,9 @@
 		</LayoutGroup>
     <Video
     	id = "liveVideo"
+	   height="720"
+           width="1280"        
+           translation="[0,0]"
 	    />
 	    
 	<Hud
